@@ -61,6 +61,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: start;
+    background-image: linear-gradient(white, rgb(165, 165, 165));
 }
 
 .main-index h1{
@@ -95,6 +96,11 @@ main{
 .container-boton{
     width: 0px;
     margin: 15px auto;
+}
+
+.imgProducto:hover{
+    transform: scale(1.8) translate(1px, 1px);
+    transition: 0.3s;
 }
 
 /*GALERIA*/
@@ -181,7 +187,6 @@ main{
 
 .main-contacto{
     min-height: 85vh;
-    margin: 15px;
 }
 
 .main-contacto h1{
@@ -193,8 +198,18 @@ main{
 .formulario{
     display: inline-block;
     align-self: center;
+    padding: 50px; 
 }
 
+input:focus{
+    background-color: #75ABBC;
+    color: rgb(0, 0, 0);
+}
+
+input:hover{
+    background-color: #75abbc80;
+    transition: 0.3s;
+}
 
 /*MEDIA QUERYS*/
 @media (max-width: 860px){

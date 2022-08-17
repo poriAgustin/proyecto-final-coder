@@ -1,0 +1,229 @@
+/* #071013
+#23B5D3
+#75ABBC
+#A2AEBB
+#DFE0E2 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+/* Header */
+.header{
+    background-color: #071013;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    width: 150px;
+    padding: 15px;
+}
+
+.header ul{
+    list-style: none;
+    display: flex;
+}
+
+.header li, .footer li{
+    margin: 10px;
+}
+
+.header a, .footer a{
+    color: #DFE0E2;
+    text-decoration: none;
+}
+
+.header a:hover, .footer a:hover{
+    color: #75ABBC;
+    font-weight: bold;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: #071013;
+}
+.footer ul{
+    display: flex;
+    list-style: none;
+    width: 450px;
+    /*Este truco es por el ancho que declaramos*/
+    margin: 0 auto;
+    justify-content: center;
+}
+
+main{
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.main-index h1{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px auto 40px
+}
+
+.txt-index{
+    background-color: #75ABBC;
+    padding: 10px;
+    width: 850px;
+    text-align: center;
+    align-self: center;
+    font-size: 19px;
+    font-weight: 300;
+    border: #071013 solid;
+}
+
+/* PRODUCTO */
+
+.main-productos{
+    min-height: 85vh;
+}
+
+.main-productos h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.container-boton{
+    width: 0px;
+    margin: 15px auto;
+}
+
+/*GALERIA*/
+.grid-container{
+    max-width: 850px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    grid-row-gap: 15px;
+    margin-bottom: 15px;
+}
+.grid-container div{
+     width: 250px;
+     height: 250px;
+     overflow: hidden;
+}
+
+.grid-container img{
+    margin-top: 0px;
+    max-height: 300px;
+}
+
+.main-galeria h1{
+    text-align: center;
+    padding: 12px;
+}
+
+/* BANNER */
+.banner{
+    max-height: 700px;
+    overflow: hidden;
+}
+.banner img{
+    max-width: 100vw;
+}
+
+/* NOSOTROS */
+
+.main-nosotros{
+    min-height: 85vh;
+    background-color: #75ABBC;
+}
+
+.container-main{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-self: center;
+    margin-top: 40px;
+}
+
+.tituloNosotros{
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.txt-nosotros{
+    padding: 10px;
+    font-size: 19px;
+    width: 500px;
+    text-align: center;
+    margin: 25px;
+}
+
+.subtituloNosotros{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.subTituloNosotros{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.txtHorarioDeA{
+    margin-bottom: 15px;
+}
+
+/* CONTACTO */
+
+.main-contacto{
+    min-height: 85vh;
+    margin: 15px;
+}
+
+.main-contacto h1{
+    text-align: center;
+    margin-right: 100px;
+    margin-bottom: 15px;
+}
+
+.formulario{
+    display: inline-block;
+    align-self: center;
+}
+
+
+/*MEDIA QUERYS*/
+@media (max-width: 860px){
+    .grid-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .txt-index{
+        width: auto;
+    }
+}
+
+
+
+@media (max-width: 680px){
+    .header{
+        flex-direction: column;
+    }
+    .header img{
+        width: 150px;
+    }
+
+    .footer ul{
+        width: 182px;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+    .txt-nosotros{
+        width: 300px;
+        align-self: center;
+    }
+}
